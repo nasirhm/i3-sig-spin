@@ -1,0 +1,33 @@
+= Fedora i3 - Kickstart Files
+Maintained by link:https://fedoraproject.org/wiki/SIGs/i3[i3 SiG]
+
+Fedora i3's Kickstart files are used in composing Fedora i3 Release images.
+
+*Note:* The i3 kickstart files are currently in development and not yet ready for production/release.
+
+== Current Workflow:
+
+For now, we've started with flattening/forking two widely used spins: `xfce` and `lxde` and adding the i3 packages there to ensure stability among packages.
+A compose build was made as `F32-20200615` with the help of folks from the Respins SiG.
+
+The kickstart files that are available are:
+
+* `flat-i3-lxde.ks` which is flattened from `flat-live-lxde.ks` which we branched for F32 instead of rawhide.
+* `flat-i3-xfce.ks` whichi is flattened from `flat-live-xfce.ks` which is also branched for F32.
+
+Both of them were modified in order to add the link:https://fedoraproject.org/wiki/SIGs/i3/Brainstorm#i3-minimal[i3-minimal] packages along with the packages used by the specific DE.
+
+== Future Workflow:
+
+We are working on cleaning the ks files in order to reach a minimal i3 kickstart.
+Which can be used to build a compose in which the Window Manager is by default set to i3.
+
+Or Maybe, Once we understand how things behave behind the curtains, we can create a custom kickstart too.
+
+== End Goal:
+
+Our end goal is to be able to create and maintain the kickstart file which can be composed as a Fedora having i3 as it's deault window manager.
+
+== Want to help
+
+We would love to have you here, Come chat with us at #fedora-i3 on Freenode.
